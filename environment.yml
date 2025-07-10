@@ -1,0 +1,54 @@
+name: biobb_env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - fpocket
+  - beem-bio
+  - meeko
+  - biobb_structure_utils
+  - biobb_chemistry
+  - biobb_analysis
+  - biobb_io
+  - biobb_model
+  - biobb_gromacs
+  - biobb_vs
+  - biobb_md
+  - biobb_amber
+  - biobb_haddock
+  - biobb_pdb_tools
+  - jupyter
+  - plotly
+  - nglview
+  - simpletraj
+  - msgspec
+  - ipylab 
+  - jupyter_app_launcher
+  - jupyterlab-unfold # https://github.com/jupyterlab-contrib/jupyterlab-unfold
+  - jupyterlab-lsp # https://github.com/jupyter-lsp/jupyterlab-lsp
+  - jupyterlab-git # https://github.com/jupyterlab/jupyterlab-git
+  - jupyterlab-variableinspector # https://github.com/lckr/jupyterlab-variableInspector
+  - jupyterlab-spellchecker # https://github.com/jupyterlab-contrib/spellchecker
+  - voila
+  - numpy=1.23
+  - scipy
+  - rdkit
+  - gemmi
+  - mdanalysis
+  - openmm
+  - vina
+  - pip<24.1
+  - molscrub
+  - multiprocess
+  - chemicalite
+  - pip:
+    - molviewspec
+    - black
+    - isort
+    - yapf
+    - autopep8
+    - jupyterlab-code-formatter #https://github.com/ryantam626/jupyterlab_code_formatter
+    - jedi-language-server
+    - ringtail
+    - gmx_MMPBSA
