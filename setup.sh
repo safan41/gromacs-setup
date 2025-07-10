@@ -20,6 +20,8 @@ if [[ $(conda --version) = conda* ]]; then
 
     echo "alias jlab=\"jupyter lab --NotebookApp.token='' --NotebookApp.password=''\"" >> ~/.bashrc
     
+    source ~/.bashrc
+    
     echo "SCRIPT COMPLETE! Activate environment with 'conda activate biobb_env' and run JupyterLab with 'jlab' to continue" 
 else
     echo 'ERROR: NO CONDA VERSION FOUND (Are you connected to the internet?)'
