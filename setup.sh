@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 cd ~
+sudo apt install libopenmpi-dev
 bash <(curl -sSL conda.sh)
 eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 conda init
