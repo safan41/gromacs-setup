@@ -4,7 +4,7 @@ bash <(curl -sSL conda.sh)
 eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 conda init
 source ~/.bashrc
-version= echo "$(conda --version)"
+version=echo "$(conda --version)"
 
 if [[ "$version" =~ ^conda.* ]]; then
     mkdir biobb && cd biobb
