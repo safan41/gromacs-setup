@@ -10,8 +10,15 @@ if [[ $(conda --version) = conda* ]]; then
     mkdir biobb
     cd biobb
     curl -o environment.yml https://raw.githubusercontent.com/safan41/gromacs-setup/refs/heads/main/environment.yml
+    
     conda env create -f environment.yml
+    
+    if [[ $? = 1 ]]; then 
+        echo 'ERROR: CONDA ENVIRONMENT FAILED (Install failed somewhere)'
+    fi
+
     echo "alias jlab=\"jupyter lab --NotebookApp.token='' --NotebookApp.password=''\"" >> ~/.bashrc
+    
     echo "SCRIPT COMPLETE! Activate environment with 'conda activate biobb_env' and run JupyterLab with 'jlab' to continue" 
 else
     echo 'ERROR: NO CONDA VERSION FOUND (Are you connected to the internet?)'
