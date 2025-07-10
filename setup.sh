@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 cd ~
-apt update
-sudo apt install libopenmpi-dev
+sudo apt update
+sudo apt install libopenmpi-dev gromacs
 bash <(curl -sSL conda.sh)
 eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 conda init
