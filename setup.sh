@@ -21,6 +21,23 @@ if [[ $(conda --version) = conda* ]]; then
     echo "alias jlab=\"jupyter lab --NotebookApp.token='' --NotebookApp.password=''\"" >> ~/.bashrc
     
     source ~/.bashrc
+
+    mkdir -p ~/.jupyter/lab/user-settings/@jupyterlab/extensionmanager-extension
+    
+    message_content="$(cat <<-EOF
+{
+    // Extension Manager
+    // @jupyterlab/extensionmanager-extension:plugin
+    // Extension manager settings.
+    // *********************************************
+
+    // Disclaimed Status
+    // Whether the user agrees the access to external web services and understands extensions may introduce security risks or contain malicious code that runs on his machine.
+    "disclaimed": true
+}
+EOF
+)"
+    echo "$message_content" > ~/.jupyter/lab/user-settings/@jupyterlab/extensionmanager-extension/plugin.jupyterlab-settings 
     
     echo "SCRIPT COMPLETE! Activate environment with 'conda activate biobb_env' and run JupyterLab with 'jlab' to continue" 
 else
