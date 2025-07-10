@@ -5,7 +5,7 @@ eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 conda init
 source ~/.bashrc
 
-if [[ "$(conda --version)" =~ ^conda.* ]]; then
+if [[ $(conda --version) = conda* ]]; then
     mkdir biobb && cd biobb
     curl -sS https://raw.githubusercontent.com/safan41/gromacs-setup/refs/heads/main/environment.yml
     conda env create -f environment.yml
